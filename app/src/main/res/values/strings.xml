@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RecGroupProject</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="welcome">Welcome to Rec-Center Booking System!</string>
+    <string name="booking_btn">Schdule A Booking</string>
+    <string name="check_btn">Check Time</string>
+    <string name="booking_t1">Please fill out the information below</string>
+    <string name="bookingt1">Plase fill out the information below</string>
+    <string name="studentid">Studen ID</string>
+    <string name="organization">Organization Name</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">CANCEL</string>
+    <string name="locationchoose">Choose Location</string>
+    <string name="result">Show Result</string>
+    <string name="choose">Choose A Location</string>
+    <string name="back">Back To Main Page</string>
+</resources>
