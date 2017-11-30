@@ -18,7 +18,9 @@
         android:layout_width="270dp"
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:entries="@array/location_array"/>
+
 
     <Button
         android:id="@+id/result_btn"

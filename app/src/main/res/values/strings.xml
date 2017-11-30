@@ -16,4 +16,15 @@
     <string name="result">Show Result</string>
     <string name="choose">Choose A Location</string>
     <string name="back">Back To Main Page</string>
+    <string name="location_btn">View Locations</string>
+    <string name="myBooking_btn">View My Bookings</string>
+    <string-array name="location_array">
+        <item>Harrington Auditorium</item>
+        <item>Alumni Stadium</item>
+        <item>RoofTop Field</item>
+        <item>Donahue Rowing Center</item>
+        <item>Squash Courts</item>
+    </string-array>
+
+
 </resources>

@@ -9,9 +9,10 @@ public abstract class SQLCommand
 
 
     //list all data in booking table
-    public static String QUERY_1 = "select * from Booking";
+    public static String QUERY_STUDENT = "select * from Student";
     //List the call numbers of books with the title ‘Database Management’
-    public static String QUERY_2 = "select lbcallnum from libbook where lbtitle = 'Database Management";
+    public static String QUERY_LOCATION = "select * from location";
+    public static String QUERY_MYBOOKING = "select * from booking where booking.s_id = ?";
     public static String QUERY_3 = "select avg(COFine), max(COFine) from CheckOut";
     public static String QUERY_4 = "select sum(COFine) from CheckOut where CoReturned = 'Y'";
     public static String QUERY_5 = "select STName, LBCallNum from Student, CheckOut where Student.STID = CheckOut.STID Order By STName";
