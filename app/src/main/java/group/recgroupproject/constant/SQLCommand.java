@@ -13,11 +13,11 @@ public abstract class SQLCommand
     //List the call numbers of books with the title ‘Database Management’
     public static String QUERY_LOCATION = "select location.loc_name as _id, loc_id,loc_name, loc_name,loc_desc, loc_desc from location";
     public static String QUERY_MYBOOKING = "select * from booking where booking.s_id = ?";
-    public static String QUERY_3 = "select avg(COFine), max(COFine) from CheckOut";
-    public static String QUERY_4 = "select sum(COFine) from CheckOut where CoReturned = 'Y'";
-    public static String QUERY_5 = "select STName, LBCallNum from Student, CheckOut where Student.STID = CheckOut.STID Order By STName";
-    public static String QUERY_6 = "select LBCallNum, Count(*) from CheckOut Group By LBCallNum";
-    public static String QUERY_7 = "select CheckOut.STID, SUM(COFine) from Checkout Group by CheckOut.STID";
+    public static String QUERY_1 = "select * from location";
+    public static String QUERY_2 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Alumni Stadium' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
+    public static String QUERY_3 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Rooftop Field' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
+    public static String QUERY_4 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Donahue Rowing Center' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
+    public static String QUERY_5 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Squash Courts' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
     public static String RETURN_BOOK = "update checkout set coreturned=? where stid=? and lbcallnum=?";
     public static String CHECK_BOOK = "insert into checkout(stid,lbcallnum,coduedate,coreturned) values(?,?,?,?)";
     //checkout summary

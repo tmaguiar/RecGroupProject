@@ -22,6 +22,8 @@
     <string name="loc_id">Number</string>
     <string name="loc_name">Name</string>
     <string name="loc_desc">Description</string>
+    <string name="partcount">Number of Participants</string>
+    <string name="eventdesc">Describe the event</string>
     <string-array name="location_array">
         <item>Harrington Auditorium</item>
         <item>Alumni Stadium</item>

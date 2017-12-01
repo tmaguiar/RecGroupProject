@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:background="@drawable/wpilogo">
+    android:orientation="vertical">
+
+    //Title
 
     <TextView
         android:id="@+id/booking_t1"
@@ -16,6 +17,8 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
+
+    //StudentID
 
     <LinearLayout
         android:id="@+id/layout_studentid"
@@ -34,7 +37,7 @@
 
         <EditText
             android:id="@+id/bookingedit1"
-            android:layout_width="411dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="30dp"
@@ -42,6 +45,8 @@
             android:inputType="textPersonName" />
 
     </LinearLayout>
+
+    /OrganisationID
 
     <LinearLayout
         android:id="@+id/layout_organization"
@@ -55,13 +60,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="@string/organization"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/bookingedit2"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.59"
             android:ems="10"
@@ -69,10 +74,96 @@
 
     </LinearLayout>
 
+    //NumberofParticipants
+
+    <LinearLayout
+        android:id="@+id/layout_count"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/booking_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/partcount"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/bookingedit2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.59"
+            android:ems="10"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    //Event Description
+
+    <LinearLayout
+        android:id="@+id/layout_desc"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/booking_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/eventdesc"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/bookingedit2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.59"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    //Date
+
+    <LinearLayout
+        android:id="@+id/layout_DatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:text="Date"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:datePickerMode="spinner"
+            android:headerBackground="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    //Buttons
+
     <LinearLayout
         android:id="@+id/layout_btns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
@@ -80,7 +171,7 @@
             android:id="@+id/submit_btn"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="160dp"
+            android:layout_marginLeft="100dp"
             android:text="@string/submit"
             android:textSize="20sp" />
 
@@ -92,5 +183,6 @@
             android:text="@string/cancel"
             android:textSize="20sp" />
     </LinearLayout>
+
 
 </LinearLayout>
