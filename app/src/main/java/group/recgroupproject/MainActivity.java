@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
 
     public void onClick(View v)
+
     {
+        String sql="";
         int id=v.getId();
         if (id==R.id.booking_btn){
             Intent intent = new Intent(this, BookingActivity.class);
@@ -55,8 +57,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
             this.startActivity(intent);
         }
         else if (id==R.id.location_btn){
-            Intent intent = new Intent(this, LocationActivity.class);
-            this.startActivity(intent);
+            sql = SQLCommand.QUERY_LOCATION;
+            Intent intent = new Intent(getApplicationContext(),
+                    group.recgroupproject.LocationActivity.class);
+            intent.putExtra("sql", sql);
+            startActivity(intent);
         }
         else if (id==R.id.myBooking_btn){
             Intent intent = new Intent(this, MyBookingActivity.class);

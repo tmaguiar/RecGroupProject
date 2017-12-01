@@ -18,6 +18,10 @@
     <string name="back">Back To Main Page</string>
     <string name="location_btn">View Locations</string>
     <string name="myBooking_btn">View My Bookings</string>
+    <string name="title_locationlist">Locations Listed</string>
+    <string name="loc_id">Number</string>
+    <string name="loc_name">Name</string>
+    <string name="loc_desc">Description</string>
     <string-array name="location_array">
         <item>Harrington Auditorium</item>
         <item>Alumni Stadium</item>
