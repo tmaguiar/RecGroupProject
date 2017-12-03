@@ -13,13 +13,23 @@ public abstract class SQLCommand
     //List the call numbers of books with the title ‘Database Management’
     public static String QUERY_LOCATION = "select location.loc_name as _id, loc_id,loc_name, loc_name,loc_desc, loc_desc from location";
     public static String QUERY_MYBOOKING = "select * from booking where booking.s_id = ?";
-    public static String QUERY_1 = "select * from location";
-    public static String QUERY_2 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Alumni Stadium' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
-    public static String QUERY_3 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Rooftop Field' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
-    public static String QUERY_4 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Donahue Rowing Center' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
-    public static String QUERY_5 = "select location.loc_name, timing.time_start,timing.time_end from location, locationdetails, timing where loc_name='Squash Courts' and location.loc_id = locationdetails.loc_id and timing.time_id=locationdetails.time_id";
+
+    //AVAILABILITY
+    public static String QUERY_1 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Harrington Auditorium'";
+    public static String QUERY_2 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Alumni Stadium'";
+    public static String QUERY_3 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Rooftop Field'";
+    public static String QUERY_4 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Donahue Rowing Center'";
+    public static String QUERY_5 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Squash Courts'";
     public static String RETURN_BOOK = "update checkout set coreturned=? where stid=? and lbcallnum=?";
-    public static String CHECK_BOOK = "insert into checkout(stid,lbcallnum,coduedate,coreturned) values(?,?,?,?)";
+    //BOOKING
+    public static String LOC_1 = "insert into booking(b_id,b_participantcount,event_desc,s_id,o_id) values(?,?,?,?,1)";
+    public static String LOC_2 = "insert into booking(b_id,b_participantcount,event_desc,s_id,o_id) values(?,?,?,?,2)";
+    public static String LOC_3 = "insert into booking(b_id,b_participantcount,event_desc,s_id,o_id) values(?,?,?,?,3)";
+    public static String LOC_4 = "insert into booking(b_id,b_participantcount,event_desc,s_id,o_id) values(?,?,?,?,4)";
+    public static String LOC_5 = "insert into booking(b_id,b_participantcount,event_desc,s_id,o_id) values(?,?,?,?,5)";
+
+    public static String BOOKING_SUMMARY = "select count(loc_name) as total from booking,location where booking.loc_id=location.loc_id GROUP BY loc_name";
+
     //checkout summary
     public static String CHECKOUT_SUMMARY = "select strftime('%m',coduedate) as month,count(*) as total from checkout where strftime('%Y',coduedate)='2011' group by month order by total desc";
    // public static String CHECKOUT_LIST = "select checkout.stid as _id, lbtitle, coduedate,coreturned,cofine,stname from checkout,student,libbook where student.stid=checkout.stid and libbook.lbcallnum=checkout.lbcallnum";

@@ -10,6 +10,8 @@
     <string name="bookingt1">Plase fill out the information below</string>
     <string name="studentid">Studen ID</string>
     <string name="organization">Organization Name</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
     <string name="submit">SUBMIT</string>
     <string name="cancel">CANCEL</string>
     <string name="locationchoose">Choose Location</string>
@@ -24,12 +26,31 @@
     <string name="loc_desc">Description</string>
     <string name="partcount">Number of Participants</string>
     <string name="eventdesc">Describe the event</string>
+    <string name="summary">Booking Summary</string>
     <string-array name="location_array">
         <item>Harrington Auditorium</item>
         <item>Alumni Stadium</item>
         <item>RoofTop Field</item>
         <item>Donahue Rowing Center</item>
         <item>Squash Courts</item>
+    </string-array>
+    <string-array name="organisation_array">
+        <item>NAWMBA</item>
+        <item>SASA</item>
+        <item>APICS</item>
+        <item>CSSA</item>
+        <item>GSG</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>10-11</item>
+        <item>11:00am-12pm</item>
+        <item>12:00pm-13:00pm</item>
+        <item>13:00pm-14:00pm</item>
+        <item>12:00pm-13:00pm</item>
+        <item>12:00pm-13:00pm</item>
+        <item>12:00pm-13:00pm</item>
+        <item>12:00pm-13:00pm</item>
+        <item>12:00pm-13:00pm</item>
     </string-array>
 
 

@@ -57,20 +57,73 @@
 
         <TextView
             android:id="@+id/booking_t3"
-            android:layout_width="wrap_content"
+            android:layout_width="182dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="@string/organization"
             android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/bookingedit2"
-            android:layout_width="140dp"
+        <Spinner
+            android:id="@+id/orgspinner"
+            android:layout_width="182dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.59"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_weight="1"
+            android:entries="@array/organisation_array" />
+
+    </LinearLayout>
+
+    /Location
+
+    <LinearLayout
+        android:id="@+id/layout_location"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/booking_t4"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/location"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/location_spinner"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/location_array" />
+
+    </LinearLayout>
+
+    /Time
+
+    <LinearLayout
+        android:id="@+id/layout_time"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/booking_t5"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/time"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/location_time"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/time_array" />
 
     </LinearLayout>
 
@@ -121,7 +174,7 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/bookingedit2"
+            android:id="@+id/bookingedit3"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.59"

@@ -64,17 +64,37 @@
             android:layout_marginLeft="40dp"
             android:text="@string/cancel"
             android:textSize="20sp" />
+
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <LinearLayout
+        android:id="@+id/layout_btns"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/summary_btn"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0.09"
+            android:gravity="center"
+            android:text="@string/summary"
+            android:textSize="20sp" />
+    </LinearLayout>
 
-</LinearLayout>
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </LinearLayout>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -36,7 +37,7 @@ public class TimeActivity  extends AppCompatActivity implements View.OnClickList
         result_btn=(Button)this.findViewById(R.id.result_btn);
         result_btn.setOnClickListener(this);
         location_spinner=(Spinner)this.findViewById(R.id.location_spinner);
-        scrollview_loc=(ScrollView)this.findViewById(R.id.scrollview_loc);
+        scrollview_loc=(ScrollView) this.findViewById(R.id.scrollview_loc);
     }
 
     public void onClick(View v)

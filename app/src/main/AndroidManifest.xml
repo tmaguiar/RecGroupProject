@@ -21,6 +21,7 @@
         <activity android:name=".TimeActivity"></activity>
         <activity android:name=".LocationActivity"></activity>
         <activity android:name=".MyBookingActivity"></activity>
+        <activity android:name="org.achartengine.GraphicalActivity"></activity>
 
 
     </application>
