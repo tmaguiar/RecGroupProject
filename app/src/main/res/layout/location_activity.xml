@@ -52,7 +52,28 @@
     <ListView
         android:id="@+id/location_listview"
         android:layout_width="match_parent"
-        android:layout_height="303dp"></ListView>
+        android:layout_height="280dp"
+        android:textColor="#ff0066"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/goback1_btn"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/back"
+            android:textSize="20sp"
+            android:layout_weight="0.25" />
+
+    </LinearLayout>
 
 </LinearLayout>
 
