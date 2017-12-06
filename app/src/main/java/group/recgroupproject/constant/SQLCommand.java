@@ -12,11 +12,10 @@ public abstract class SQLCommand
     public static String QUERY_STUDENT = "select * from Student";
     //List the call numbers of books with the title ‘Database Management’
     public static String QUERY_LOCATION = "select location.loc_name as _id, loc_id,loc_name, loc_name,loc_desc, loc_desc from location";
-    public static String QUERY_MYBOOKING = "select * from booking where booking.s_id = ?";
     public static String QUERY_MYBOOKING = "select booking.b_id as _id, b_id, event_desc, loc_name , time_start, time_end from booking, timing, location where booking.s_id = ? and booking.time_id = timing.time_id and booking.loc_id = location.loc_id";
 
     //AVAILABILITY
-    public static String QUERY_1 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Harrington Auditorium'";
+    public static String QUERY_1 = "select location.loc_id as loc_id ,loc_name , b_date, time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Harrington Auditorium'";
     public static String QUERY_2 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Alumni Stadium'";
     public static String QUERY_3 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Rooftop Field'";
     public static String QUERY_4 = "select location.loc_id as loc_id ,loc_name , time_start,time_end from location,timing,booking where booking.loc_id=location.loc_id and booking.time_id=timing.time_id and loc_name='Donahue Rowing Center'";

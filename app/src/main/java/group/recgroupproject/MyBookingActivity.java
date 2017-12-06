@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.view.View;
+import android.support.v4.app.DialogFragment;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -65,6 +67,14 @@ public class MyBookingActivity extends AppCompatActivity implements View.OnClick
             if (cursor.getCount() <= 0) {
                 String data1 = "no such id";
                 Log.i(data1, "WRONG ID");
+
+              AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+                dlgAlert.setMessage("INVALID STUDENT ID");
+               // dlgAlert.setTitle("App Title");
+                dlgAlert.setPositiveButton("OK", null);
+                dlgAlert.setCancelable(true);
+                dlgAlert.create().show();
+
                 Toast.makeText(getApplicationContext(), "INVALID STUDENT ID", Toast.LENGTH_SHORT).show();
             } else {
                 SimpleCursorAdapter adapter = new SimpleCursorAdapter(
